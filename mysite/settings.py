@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os 
+import dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,6 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-6-nfjo7==w%s-h&7#3a#vy2+381t5zfao&^wy7_z*!v4-ycq-1"
+
+# openai API key
+load_dotenv()
+
+API_KEY = os.environ.get("API_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
