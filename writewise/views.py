@@ -8,7 +8,7 @@ from django.conf import settings
 # Configure the OpenAI API key
 # openai.api_key = settings.API_KEY -- this is for local host
 
-api_key = os.environ.get('API_KEY') # this is for pythonanywhere
+openai.api_key = os.environ.get('API_KEY') # this is for pythonanywhere
 
 def index(request):
     if request.method == 'POST':
