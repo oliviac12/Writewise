@@ -2,9 +2,10 @@ from django.shortcuts import render
 from .models import Submission
 from .forms import SubmissionForm
 import openai
+from django.conf import settings
 
 # Configure the OpenAI API key
-openai.api_key = "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"
+openai.api_key = settings.API_KEY
 
 def index(request):
     if request.method == 'POST':
